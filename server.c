@@ -673,6 +673,8 @@ int followPlayer(struct beast *beast)
     int x = beast->pos.x;
     int y = beast->pos.y;
 
+    
+    // Nie jestem dumny z tego kodu ale było już późno a musiałem to skończyć xD
     if((x-2>0 && (*(*((*beast->board) + (x-2)) + y) == '1' || *(*((*beast->board) + (x-2)) + y) == '2') && *(*((*beast->board) + (x-1)) + y) !='w')||(x-1>0 &&(*(*((*beast->board) + (x-1)) + y) =='1'||*(*((*beast->board) + (x-1)) + y) =='2')))
         return 2; //up
     else if((x+2<25 && (*(*((*beast->board) + (x+2)) + y) == '1' || *(*((*beast->board) + (x+2)) + y) == '2') && *(*((*beast->board) + (x+1)) + y) !='w') ||(x+1<25 && (*(*((*beast->board) + (x+1)) + y) =='1'||*(*((*beast->board) + (x+1)) + y) =='2')))
